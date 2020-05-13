@@ -19,6 +19,22 @@ from [Trimesh][].
 [rtree]: https://toblerity.org/rtree/
 [trimesh]: https://trimsh.org/
 
+## Installation
+
+Requires [libspatialindex][].
+
+### Mac OS
+
+```sh
+brew install spatialindex
+```
+
+### Ubuntu
+
+```sh
+apt-get install libspatialindex-dev
+```
+
 ## Contribute
 
 - Issue Tracker: https://github.com/lace/proximity/issues
