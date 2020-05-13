@@ -2,9 +2,7 @@
 
 ```eval_rst
 
-.. py:currentmodule:: proximity
-
-.. autoclass:: Scene
+.. automodule:: proximity
     :members:
 
 ```
