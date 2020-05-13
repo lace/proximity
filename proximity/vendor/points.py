@@ -9,14 +9,14 @@ import copy
 import numpy as np
 
 from .parent import Geometry
-from .geometry import plane_transform
+# from .geometry import plane_transform
 from .constants import tol
-from .visual.color import VertexColor
+# from .visual.color import VertexColor
 
 from . import util
 from . import caching
 from . import grouping
-from . import transformations
+# from . import transformations
 
 
 def point_plane_distance(points,
