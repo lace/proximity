@@ -1,0 +1,5 @@
+numpy
+scipy
+polliwog==1.0.0b9
+rtree==0.9.1
+vg>=1.7.0,<2.0.0
