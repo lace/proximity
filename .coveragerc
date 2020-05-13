@@ -2,3 +2,4 @@
 fail_under = 100.0
 omit =
     **/test_*.py
+    **/vendor/*.py

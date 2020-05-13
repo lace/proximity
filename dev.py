@@ -14,7 +14,7 @@ def python_source_files():
         + glob.glob("proximity/**/*.py")
         + ["doc/"]
     )
-    exclude_paths = []
+    exclude_paths = glob.glob("proximity/vendor/*.py") + []
     return [x for x in include_paths if x not in exclude_paths]
 
 
