@@ -1,7 +1,7 @@
 import numpy as np
 from polliwog.tri.functions import surface_normals
-from .vendor.triangles import bounds_tree
 from scipy.spatial import cKDTree
+from .vendor.triangles import bounds_tree
 
 
 class MockTrimesh:
