@@ -1,5 +1,5 @@
 numpy
 scipy
 polliwog==1.0.0b10
-rtree==0.9.1
+rtree==0.9.7
 vg>=1.7.0,<2.0.0
