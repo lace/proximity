@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0b0
+
+Same as 0.2.0b0.
+
 ## 0.2.0b0
 
 - Bump rtree to 0.9.7, which now ships wheels with libspatialindex
