@@ -8,12 +8,6 @@ jobs:
       - checkout
 
       - run:
-          name: Install container dependencies
-          command: |
-            sudo apt-get update
-            sudo apt-get install -qq -y libspatialindex-dev
-
-      - run:
           name: Install python dependencies
           command: |
             mkdir -p venv
@@ -49,12 +43,6 @@ jobs:
       - checkout
 
       - run:
-          name: Install container dependencies
-          command: |
-            sudo apt-get update
-            sudo apt-get install -qq -y libspatialindex-dev
-
-      - run:
           name: Install python dependencies
           command: |
             mkdir -p venv
@@ -80,12 +68,6 @@ jobs:
 
     steps:
       - checkout
-
-      - run:
-          name: Install container dependencies
-          command: |
-            sudo apt-get update
-            sudo apt-get install -qq -y libspatialindex-dev
 
       - run:
           name: Install python dependencies
