@@ -2,7 +2,7 @@
 
 ## 0.3.0
 
-- Update polliwog dependency.
+- Upgrade polliwog dependency.
 
 
 ## 0.3.0b0
