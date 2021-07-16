@@ -19,17 +19,17 @@ from [Trimesh][].
 [rtree]: https://toblerity.org/rtree/
 [trimesh]: https://trimsh.org/
 
-## Contribute
 
-- Issue Tracker: https://github.com/lace/proximity/issues
-- Source Code: https://github.com/lace/proximity
+## Development
 
-Pull requests welcome!
+First, [install Poetry][].
 
+After cloning the repo, run `./bootstrap.zsh` to initialize a virtual
+environment with the project's dependencies.
 
-## Support
+Subsequently, run `./dev.py install` to update the dependencies.
 
-If you are having issues, please let us know.
+[install poetry]: https://python-poetry.org/docs/#installatio
 
 
 ## Acknowledgements
