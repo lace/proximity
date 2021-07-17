@@ -261,6 +261,23 @@ MarkupSafe = ">=2.0"
 i18n = ["Babel (>=2.7)"]
 
 [[package]]
+name = "lacecore"
+version = "0.10.0"
+description = "Polygonal mesh library optimized for cloud computation."
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = "*"
+ounce = ">=1.1.0,<2.0"
+polliwog = "1.0.0b13"
+vg = ">=1.7.0,<2.0"
+
+[package.extras]
+obj = ["tinymetabobjloader (==2.0.0a0)"]
+
+[[package]]
 name = "markdown-it-py"
 version = "1.1.0"
 description = "Python port of markdown-it. Markdown parsing, done right!"
@@ -352,11 +369,11 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "ounce"
-version = "1.1.0"
-description = "A simple Python package to manipulate units"
+version = "1.1.1"
+description = "Fast, simple, non-fancy, and non-magical package for manipulating units of measure"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4"
 
 [[package]]
 name = "packaging"
@@ -401,16 +418,16 @@ dev = ["pre-commit", "tox"]
 
 [[package]]
 name = "polliwog"
-version = "1.0.0b14"
-description = "2D and 3D computational geometry library"
+version = "1.0.0b13"
+description = "2D and 3D computational geometry library which scales from prototyping to production"
 category = "main"
 optional = false
-python-versions = ">=3.7,<4"
+python-versions = "*"
 
 [package.dependencies]
 numpy = "<1.19.0"
 ounce = ">=1.1.0,<2.0"
-vg = ">=1.11.1"
+vg = ">=1.5.0"
 
 [[package]]
 name = "property-manager"
@@ -772,7 +789,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<4"
-content-hash = "96c0019ab8e2067f0bb82706d700bd234d813853cf252fccad758807f80fcad8"
+content-hash = "ceef9a6d9250dc6e6d2e778305fc31776c7e08670bf3087e13ced4fac796fc63"
 
 [metadata.files]
 alabaster = [
@@ -917,6 +934,9 @@ jinja2 = [
     {file = "Jinja2-3.0.1-py3-none-any.whl", hash = "sha256:1f06f2da51e7b56b8f238affdd6b4e2c61e39598a378cc49345bc1bd42a978a4"},
     {file = "Jinja2-3.0.1.tar.gz", hash = "sha256:703f484b47a6af502e743c9122595cc812b0271f661722403114f71a79d0f5a4"},
 ]
+lacecore = [
+    {file = "lacecore-0.10.0-py3-none-any.whl", hash = "sha256:9a81be26537fe82c0437d9153e3a50bb79ae64046b6a63232e87ef40bb3b8a57"},
+]
 markdown-it-py = [
     {file = "markdown-it-py-1.1.0.tar.gz", hash = "sha256:36be6bb3ad987bfdb839f5ba78ddf094552ca38ccbd784ae4f74a4e1419fc6e3"},
     {file = "markdown_it_py-1.1.0-py3-none-any.whl", hash = "sha256:98080fc0bc34c4f2bcf0846a096a9429acbd9d5d8e67ed34026c03c61c464389"},
@@ -997,8 +1017,8 @@ numpy = [
     {file = "numpy-1.18.5.zip", hash = "sha256:34e96e9dae65c4839bd80012023aadd6ee2ccb73ce7fdf3074c62f301e63120b"},
 ]
 ounce = [
-    {file = "ounce-1.1.0-py3-none-any.whl", hash = "sha256:2d1337079ce3987574d1d2e895928e44c25542b0db5b98829e1718e5d5e61922"},
-    {file = "ounce-1.1.0.tar.gz", hash = "sha256:e8f158e90392ea6e6c15127672f53edabe290f670deaf931bd9cd40379a37d75"},
+    {file = "ounce-1.1.1-py3-none-any.whl", hash = "sha256:5273cf7b609ed1b9fb814af6cc3000476262ccd327bd20c0e799f6ed5052f638"},
+    {file = "ounce-1.1.1.tar.gz", hash = "sha256:b0d71780666793942aeb7e929121dad1ef709c187ee398d505544d97f89bf4a8"},
 ]
 packaging = [
     {file = "packaging-21.0-py3-none-any.whl", hash = "sha256:c86254f9220d55e31cc94d69bade760f0847da8000def4dfe1c6b872fd14ff14"},
@@ -1017,8 +1037,8 @@ pluggy = [
     {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
 ]
 polliwog = [
-    {file = "polliwog-1.0.0b14-py3-none-any.whl", hash = "sha256:eb575710d706c1ebe4dd3c6f577a48a3e99bd9600247880d48d7a3471ccaebb1"},
-    {file = "polliwog-1.0.0b14.tar.gz", hash = "sha256:10ce6b3a907cde1a45a39ff02852ba2bd85e5c35b2f4a00df63b73323bd5e8ee"},
+    {file = "polliwog-1.0.0b13-py3-none-any.whl", hash = "sha256:a6d8dec48faa5604b5fea6cf6f472894927885f020a9dc9bca3ff463511ddce6"},
+    {file = "polliwog-1.0.0b13.tar.gz", hash = "sha256:3fdca920aad4abc2c2aed88df52c5b7ac19f91515ebb271f95a762044d3bc3d9"},
 ]
 property-manager = [
     {file = "property-manager-3.0.tar.gz", hash = "sha256:93e76da9ae7af13cccc2cd1e3b47219950c56c125cd962aaed693894af267c54"},
