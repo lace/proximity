@@ -1,6 +1,6 @@
 from lacecore import shapes
 import numpy as np
-from .convenience import faces_nearest_to_points
+from proximity import faces_nearest_to_points
 
 
 def test_faces_nearest_to_points():

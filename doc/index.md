@@ -1,6 +1,6 @@
 # proximity
 
-```eval_rst
+```{eval-rst}
 
 .. automodule:: proximity
     :members:
