@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0
+
+- Upgrade polliwog dependency.
+
+
 ## 1.0.0
 
 - Upgrade polliwog and vg dependencies.
