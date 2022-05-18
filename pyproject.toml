@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "proximity"
-version = "1.1.0"
+version = "1.1.1"
 description = "Mesh proximity queries based on libspatialindex and rtree, extracted from Trimesh"
 authors = ["Paul Melnikow <github@paulmelnikow.com>", "Michael Dawson-Haggerty, Metabolize, Minnow Software, and other contributors"]
 license = "MIT"
@@ -22,7 +22,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.7,<4"
 numpy = "*"
-polliwog = ">=2.0.0,<3"
+polliwog = ">=2.0.0,<=3.0.0"
 rtree = "0.9.7"
 scipy = "*"
 vg = ">=2.0.0"
