@@ -38,7 +38,7 @@ lacecore = "3.0.0a1"
 myst-parser = "0.18.1"
 pytest = "7.2.0"
 pytest-cov = "4.0.0"
-Sphinx = "4.5.0"
+Sphinx = "4.3.2"
 sphinxcontrib-apidoc = "0.3.0"
 
 [build-system]
