@@ -86,7 +86,6 @@ jobs:
           when: always
           command: ./dev.py black-check
 
-
 workflows:
   version: 2
 
