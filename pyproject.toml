@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "proximity"
-version = "1.2.0"
+version = "2.0.0"
 description = "Mesh proximity queries based on libspatialindex and rtree, extracted from Trimesh"
 authors = ["Paul Melnikow <github@paulmelnikow.com>", "Michael Dawson-Haggerty, Metabolize, Minnow Software, and other contributors"]
 license = "MIT"

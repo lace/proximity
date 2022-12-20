@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.0
+## 2.0.0
 
 - Require polliwog 3.0.0 prerelease or higher, and update rtree.
 
