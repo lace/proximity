@@ -55,11 +55,11 @@ def merge_vertices(mesh,
     # if we have a ton of unreferenced vertices it will
     # make the unique_rows call super slow so cull first
     if hasattr(mesh, 'faces') and len(mesh.faces) > 0:
-        referenced = np.zeros(len(mesh.vertices), dtype=np.bool)
+        referenced = np.zeros(len(mesh.vertices), dtype=bool)
         referenced[mesh.faces] = True
     else:
         # this is used for geometry without faces
-        referenced = np.ones(len(mesh.vertices), dtype=np.bool)
+        referenced = np.ones(len(mesh.vertices), dtype=bool)
 
     # collect vertex attributes into sequence we can stack
     stacked = [mesh.vertices * (10 ** digits_vertex)]
@@ -230,7 +230,7 @@ def float_to_int(data, digits=None, dtype=np.int32):
     # populate digits from kwargs
     if digits is None:
         digits = util.decimal_to_digits(tol.merge)
-    elif isinstance(digits, float) or isinstance(digits, np.float):
+    elif isinstance(digits, float):
         digits = util.decimal_to_digits(digits)
     elif not (isinstance(digits, int) or isinstance(digits, np.integer)):
         log.warning('Digits were passed as %s!', digits.__class__.__name__)
@@ -317,7 +317,7 @@ def unique_bincount(values,
 
     # which bins are occupied at all
     # counts are integers so this works
-    unique_bin = counts.astype(np.bool)
+    unique_bin = counts.astype(bool)
 
     # which values are unique
     # indexes correspond to original values
@@ -475,7 +475,7 @@ def unique_value_in_row(data, unique=None):
     if unique is None:
         unique = np.unique(data)
     data = np.asanyarray(data)
-    result = np.zeros_like(data, dtype=np.bool, subok=False)
+    result = np.zeros_like(data, dtype=bool, subok=False)
     for value in unique:
         test = np.equal(data, value)
         test_ok = test.sum(axis=1) == 1
@@ -650,7 +650,7 @@ def group_distance(values, distance):
                            dtype=np.float64)
 
     consumed = np.zeros(len(values),
-                        dtype=np.bool)
+                        dtype=bool)
     tree = cKDTree(values)
 
     # (n, d) set of values that are unique
