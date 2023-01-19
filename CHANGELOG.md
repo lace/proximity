@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1
+
+- Support NumPy 1.24+
+
+
 ## 2.0.0
 
 - Require polliwog 3.0.0 prerelease or higher, and update rtree.
