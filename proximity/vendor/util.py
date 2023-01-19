@@ -1929,14 +1929,14 @@ def triangle_strips_to_faces(strips):
     # remove the triangles which were implicit but not actually there
     # because we combined everything into one big array for speed
     length_index = np.cumsum(lengths)[:-1]
-    keep = np.ones(len(tri), dtype=np.bool)
+    keep = np.ones(len(tri), dtype=bool)
     keep[length_index - 2] = False
     keep[length_index - 1] = False
     tri = tri[keep]
 
     # flip every other triangle so they generate correct normals/winding
     length_index = np.append(0, np.cumsum(lengths - 2))
-    flip = np.zeros(length_index[-1], dtype=np.bool)
+    flip = np.zeros(length_index[-1], dtype=bool)
     for i in range(len(length_index) - 1):
         flip[length_index[i] + 1:length_index[i + 1]][::2] = True
     tri[flip] = np.fliplr(tri[flip])
