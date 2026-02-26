@@ -3,13 +3,13 @@ name: Prepare environment
 inputs:
   'python-version':
     required: false
-    default: '3.10'
+    default: '3.9'
   'poetry-version':
     required: false
     default: '1.2.2'
   'numpy-version':
     required: false
-    default: '1.26.4'
+    default: '1.24.1'
   'extras-param':
     required: false
     default: ''
