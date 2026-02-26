@@ -4,7 +4,7 @@ from polliwog.tri.functions import surface_normals
 from scipy.spatial import cKDTree
 from .vendor.triangles import bounds_tree
 
-if t.TYPE_CHECKING:
+if t.TYPE_CHECKING:  # pragma: no cover
     from rtree.index import Index
 
 
