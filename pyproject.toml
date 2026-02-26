@@ -4,7 +4,7 @@ version = "2.0.1"
 description = "Mesh proximity queries based on libspatialindex and rtree, extracted from Trimesh"
 authors = ["Paul Melnikow <github@paulmelnikow.com>", "Michael Dawson-Haggerty, Metabolize, Minnow Software, and other contributors"]
 license = "MIT"
-include = ["CHANGELOG.md"]
+include = ["CHANGELOG.md", "proximity/py.typed"]
 exclude = ["**/test_*.py"]
 homepage = "https://proximity.readthedocs.io/en/stable/"
 repository = "https://github.com/lace/proximity"
@@ -20,7 +20,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.7,<4"
+python = ">=3.9,<4"
 numpy = "*"
 polliwog = ">=3.0.0a0,<4.0.0"
 rtree = "1.0.1"
@@ -35,6 +35,7 @@ executor = "23.2"
 flake8 = "5.0.4"
 flake8-import-order = "0.18.2"
 lacecore = "3.0.0a1"
+mypy = "1.19.1"
 myst-parser = "0.18.1"
 pytest = "7.2.0"
 pytest-cov = "4.0.0"
@@ -49,3 +50,26 @@ build-backend = "poetry.core.masonry.api"
 [tool.coverage.report]
 fail_under = 100.0
 omit = ["**/test_*.py", "**/vendor/*.py"]
+
+[tool.mypy]
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "proximity.vendor.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = 'vg.compat'
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = 'polliwog.*'
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = 'lacecore.*'
+ignore_missing_imports = true

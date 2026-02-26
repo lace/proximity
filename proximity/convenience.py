@@ -1,9 +1,15 @@
+import numpy as np
 from vg.compat import v2 as vg
 from .mock_trimesh import MockTrimesh
 from .vendor.proximity import closest_point
 
 
-def faces_nearest_to_points(vertices, faces, query_points, ret_points=False):
+def faces_nearest_to_points(
+    vertices: np.ndarray,
+    faces: np.ndarray,
+    query_points: np.ndarray,
+    ret_points: bool = False,
+):
     """
     Find the triangular faces on a mesh which are nearest to the given query
     points.

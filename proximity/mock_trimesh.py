@@ -1,11 +1,16 @@
+import typing as t
 import numpy as np
 from polliwog.tri.functions import surface_normals
 from scipy.spatial import cKDTree
 from .vendor.triangles import bounds_tree
 
+if t.TYPE_CHECKING:
+    from rtree.index import Index
 
 class MockTrimesh:
-    def __init__(self, vertices, faces):
+    triangles_tree: "Index"
+
+    def __init__(self, vertices: np.ndarray, faces: np.ndarray):
         self.vertices = vertices
         self.faces = faces
         self.triangles = vertices[faces]

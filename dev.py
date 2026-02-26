@@ -45,6 +45,12 @@ def coverage_report():
 
 
 @cli.command()
+def check_types():
+    execute("mypy --show-error-codes proximity/")
+    execute("mypy --show-error-codes dev.py")
+
+
+@cli.command()
 def lint():
     execute("flake8", *python_source_files())
 
