@@ -7,6 +7,7 @@ from .vendor.triangles import bounds_tree
 if t.TYPE_CHECKING:
     from rtree.index import Index
 
+
 class MockTrimesh:
     triangles_tree: "Index"
 
