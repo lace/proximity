@@ -1,9 +1,36 @@
+import typing as t
+import numpy as np
 from vg.compat import v2 as vg
 from .mock_trimesh import MockTrimesh
 from .vendor.proximity import closest_point
 
 
-def faces_nearest_to_points(vertices, faces, query_points, ret_points=False):
+@t.overload
+def faces_nearest_to_points(
+    vertices: np.ndarray,
+    faces: np.ndarray,
+    query_points: np.ndarray,
+    ret_points: t.Literal[True],
+) -> tuple[np.ndarray, np.ndarray]:
+    ...  # pragma: no cover
+
+
+@t.overload
+def faces_nearest_to_points(
+    vertices: np.ndarray,
+    faces: np.ndarray,
+    query_points: np.ndarray,
+    ret_points: t.Literal[False],
+) -> np.ndarray:
+    ...  # pragma: no cover
+
+
+def faces_nearest_to_points(
+    vertices: np.ndarray,
+    faces: np.ndarray,
+    query_points: np.ndarray,
+    ret_points: bool = False,
+) -> t.Union[np.ndarray, tuple[np.ndarray, np.ndarray]]:
     """
     Find the triangular faces on a mesh which are nearest to the given query
     points.
@@ -27,5 +54,5 @@ def faces_nearest_to_points(vertices, faces, query_points, ret_points=False):
     vg.shape.check(locals(), "query_points", (-1, 3))
 
     trimesh = MockTrimesh(vertices=vertices, faces=faces)
-    closest_points, _, face_indices = closest_point(trimesh, query_points)
+    closest_points, _, face_indices = closest_point(trimesh, query_points)  # type: ignore[no-untyped-call]
     return (face_indices, closest_points) if ret_points else face_indices

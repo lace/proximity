@@ -3,7 +3,7 @@ import numpy as np
 from proximity import faces_nearest_to_points
 
 
-def test_faces_nearest_to_points():
+def test_faces_nearest_to_points() -> None:
     mesh = shapes.cube(np.zeros(3), 3.0)
     query_points = np.array([[0.25, 0.25, -0.4], [3.1, 0.6, 3.05]])
     face_indices, closest_points = faces_nearest_to_points(
