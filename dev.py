@@ -25,7 +25,7 @@ def cli():
 
 @cli.command()
 def install():
-    execute("poetry install --remove-untracked")
+    execute("poetry install --sync")
 
 
 @cli.command()
