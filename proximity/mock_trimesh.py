@@ -16,5 +16,5 @@ class MockTrimesh:
         self.faces = faces
         self.triangles = vertices[faces]
         self.face_normals = surface_normals(self.triangles)
-        self.triangles_tree = bounds_tree(self.triangles)   # type: ignore[no-untyped-call]
+        self.triangles_tree = bounds_tree(self.triangles)  # type: ignore[no-untyped-call]
         self.kdtree = cKDTree(vertices.view(np.ndarray))
