@@ -98,8 +98,6 @@ jobs:
       uses: actions/checkout@v4
 
     - uses: ./.github/workflows/common
-      with:
-        extras-param: '--extras doc'
 
     - name: Build the package
       run: poetry build
