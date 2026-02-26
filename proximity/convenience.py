@@ -11,8 +11,7 @@ def faces_nearest_to_points(
     faces: np.ndarray,
     query_points: np.ndarray,
     ret_points: t.Literal[True],
-) -> tuple[np.ndarray, np.ndarray]:
-    ...
+) -> tuple[np.ndarray, np.ndarray]: ...
 
 
 @t.overload
@@ -21,8 +20,7 @@ def faces_nearest_to_points(
     faces: np.ndarray,
     query_points: np.ndarray,
     ret_points: t.Literal[False],
-) -> np.ndarray:
-    ...
+) -> np.ndarray: ...
 
 
 def faces_nearest_to_points(
