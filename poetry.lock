@@ -785,7 +785,7 @@ numpy = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<4"
-content-hash = "98f6770c5bc12921500506825414fd03b41082f9847b98ef1f2d1315c754aa65"
+content-hash = "b50e5a2dc8ef86fe0c2579ccfb679a29dbcaa3ecba9cef6dfaa3871e1030472f"
 
 [metadata.files]
 alabaster = [
