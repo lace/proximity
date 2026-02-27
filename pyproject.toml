@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "proximity"
-version = "2.0.1"
+version = "3.0.0a0"
 description = "Mesh proximity queries based on libspatialindex and rtree, extracted from Trimesh"
 authors = ["Paul Melnikow <github@paulmelnikow.com>", "Michael Dawson-Haggerty, Metabolize, Minnow Software, and other contributors"]
 license = "MIT"
@@ -23,9 +23,12 @@ classifiers = [
 python = ">=3.10,<4"
 numpy = "*"
 polliwog = ">=3.0.0a0,<4.0.0"
-rtree = "1.0.1"
+rtree = "1.4.1"
 scipy = "*"
 vg = ">=2.0.0"
+Sphinx = {version = "8.1.3", optional = true}
+sphinxcontrib-apidoc = {version = "0.6.0", optional = true}
+myst-parser = {version = "4.0.1", optional = true}
 
 [tool.poetry.dev-dependencies]
 black = "22.10.0"
@@ -36,11 +39,12 @@ flake8 = "7.3.0"
 flake8-import-order = "0.19.2"
 lacecore = "3.0.0a1"
 mypy = "1.19.1"
-myst-parser = "4.0.1"
 pytest = "7.2.0"
 pytest-cov = "4.0.0"
-Sphinx = "8.1.3"
-sphinxcontrib-apidoc = "0.6.0"
+twine = "4.0.2"
+
+[tool.poetry.extras]
+doc = ["Sphinx", "sphinxcontrib-apidoc", "myst-parser"]
 
 [build-system]
 # Lint requires setuptools.
