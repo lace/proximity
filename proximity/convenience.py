@@ -19,7 +19,7 @@ def faces_nearest_to_points(  # noqa: E704
     vertices: np.ndarray,
     faces: np.ndarray,
     query_points: np.ndarray,
-    ret_points: t.Literal[False],
+    ret_points: t.Literal[False] = False,
 ) -> np.ndarray: ...  # pragma: no cover
 
 
