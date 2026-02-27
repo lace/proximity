@@ -63,7 +63,7 @@ jobs:
             scipy-version: '1.6.1'
           - python-version: '3.10'
             numpy-version: '1.26.4'
-            scipy-version: '1.17.1'
+            scipy-version: '1.15.3'
           - python-version: '3.11'
             numpy-version: '1.26.4'
             scipy-version: '1.17.1'
