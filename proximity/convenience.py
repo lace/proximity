@@ -28,8 +28,7 @@ def faces_nearest_to_points(
     vertices: np.ndarray,
     faces: np.ndarray,
     query_points: np.ndarray,
-) -> np.ndarray:
-    ...  # pragma: no cover
+) -> np.ndarray: ...  # pragma: no cover
 
 
 def faces_nearest_to_points(
