@@ -1,5 +1,23 @@
 # Changelog
 
+## 3.0.0a1
+
+### BREAKING CHANGES
+
+- Require Python 3.10+
+
+### New features
+
+- Support NumPy 2 (NumPy 1 is still supported)
+
+### Bug fixes
+
+- Types: Fix one of the overloads.
+
+### Other changes
+
+- Update vendored-in code from Trimesh to support NumPy 2
+
 ## 3.0.0a0
 
 ### BREAKING CHANGES
@@ -17,7 +35,6 @@
 ## 2.0.1
 
 - Support NumPy 1.24+
-
 
 ## 2.0.0
 
