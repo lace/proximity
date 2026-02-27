@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0a0
+
+### BREAKING CHANGES
+
+- Require Python 3.9+ (with NumPy <2)
+
+### New features
+
+- Provide type annotations.
+
 ## 2.0.1
 
 - Support NumPy 1.24+
