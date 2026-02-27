@@ -3,13 +3,16 @@ name: Prepare environment
 inputs:
   'python-version':
     required: false
-    default: '3.9'
+    default: '3.10'
   'poetry-version':
     required: false
     default: '1.2.2'
   'numpy-version':
     required: false
-    default: '1.24.1'
+    default: '1.26.4'
+  'scipy-version':
+    required: false
+    default: '1.15.3'
   'extras-param':
     required: false
     default: ''
@@ -32,23 +35,25 @@ runs:
       uses: actions/cache@v3
       with:
         path: .venv
-        key: venv-v2-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.numpy-version }}-${{ inputs.extras-param }}-${{ hashFiles('poetry.lock') }}
+        key: venv-v2-${{ runner.os }}-${{ inputs.python-version }}-${{ inputs.numpy-version }}-${{ inputs.scipy-version }}-${{ inputs.extras-param }}-${{ hashFiles('poetry.lock') }}
 
     - name: Create the in-project virtualenv if it doesn't exist
       shell: bash
       run: test -d .venv || python -m venv .venv
 
-    - name: Install NumPy ${{ inputs.numpy-version }}
+    - name: Install NumPy ${{ inputs.numpy-version }} and SciPy ${{ inputs.scipy-version }}
       shell: bash
       run: |
         . .venv/bin/activate
-        pip install --only-binary :all: numpy==${{ inputs.numpy-version }}
+        pip install --only-binary :all: \
+          numpy==${{ inputs.numpy-version }} \
+          scipy==${{ inputs.scipy-version }}
 
-    - name: Install dependencies (excluding numpy)
+    - name: Install dependencies (excluding numpy and scipy)
       shell: bash
       run: |
         poetry export -f requirements.txt --with dev ${{ inputs.extras-param }} --without-hashes | \
-          grep -v "^numpy" | \
+          grep -Ev "^(numpy|scipy)" | \
           ./.venv/bin/pip install -r /dev/stdin
         . .venv/bin/activate && pip install -e . --no-deps
         pip freeze
