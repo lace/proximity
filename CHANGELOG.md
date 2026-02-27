@@ -10,6 +10,10 @@
 
 - Support NumPy 2 (NumPy 1 is still supported)
 
+### Bug fixes
+
+- Types: Fix one of the overloads.
+
 ### Other changes
 
 - Update vendored-in code from Trimesh to support NumPy 2
