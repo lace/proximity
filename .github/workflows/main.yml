@@ -67,9 +67,9 @@ jobs:
           - python-version: '3.11'
             numpy-version: '1.26.4'
             scipy-version: '1.17.1'
-          # - python-version: '3.12'
-          #   numpy-version: '1.26.4'
-          #   scipy-version: '1.17.1'
+          - python-version: '3.12'
+            numpy-version: '1.26.4'
+            scipy-version: '1.17.1'
           # - python-version: '3.11'
           #   numpy-version: '2.4.2'
           #   scipy-version: '1.17.1'
@@ -106,6 +106,8 @@ jobs:
       uses: actions/checkout@v4
 
     - uses: ./.github/workflows/common
+      with:
+        extras-param: --extras doc
 
     - name: Build the package
       run: poetry build

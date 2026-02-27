@@ -25,7 +25,7 @@ def cli() -> None:
 
 @cli.command()
 def install() -> None:
-    execute("poetry install --sync")
+    execute("poetry install --sync --extras doc")
 
 
 @cli.command()
