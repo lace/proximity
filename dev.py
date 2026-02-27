@@ -2,6 +2,7 @@
 
 import glob
 import os
+import shutil
 import click
 import sh
 
@@ -66,7 +67,9 @@ def black_check() -> None:
 
 @cli.command()
 def doc() -> None:
-    sh.rm("-rf", "build/", "doc/build/", "doc/api/", _fg=True)
+    shutil.rmtree("build/", ignore_errors=True)
+    shutil.rmtree("doc/build/", ignore_errors=True)
+    shutil.rmtree("doc/api/", ignore_errors=True)
     sh.Command("sphinx-build")("-W", "-b", "singlehtml", "doc", "doc/build", _fg=True)
 
 
@@ -83,7 +86,8 @@ def clean() -> None:
 
 @cli.command()
 def publish() -> None:
-    sh.rm("-rf", "dist/", "build/", _fg=True)
+    shutil.rmtree("dist/", ignore_errors=True)
+    shutil.rmtree("build/", ignore_errors=True)
     sh.poetry("build", _fg=True)
     sh.twine("upload", *glob.glob("dist/*"), _fg=True)
 
