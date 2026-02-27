@@ -6,23 +6,21 @@ from .vendor.proximity import closest_point
 
 
 @t.overload
-def faces_nearest_to_points(
+def faces_nearest_to_points(  # noqa: E704
     vertices: np.ndarray,
     faces: np.ndarray,
     query_points: np.ndarray,
     ret_points: t.Literal[True],
-) -> tuple[np.ndarray, np.ndarray]:
-    ...  # pragma: no cover
+) -> tuple[np.ndarray, np.ndarray]: ...  # pragma: no cover
 
 
 @t.overload
-def faces_nearest_to_points(
+def faces_nearest_to_points(  # noqa: E704
     vertices: np.ndarray,
     faces: np.ndarray,
     query_points: np.ndarray,
     ret_points: t.Literal[False],
-) -> np.ndarray:
-    ...  # pragma: no cover
+) -> np.ndarray: ...  # pragma: no cover
 
 
 def faces_nearest_to_points(
