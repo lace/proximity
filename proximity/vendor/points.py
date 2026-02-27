@@ -17,7 +17,7 @@ from .geometry import plane_transform
 from .inertia import points_inertia
 from .parent import Geometry3D
 from .typed import ArrayLike, NDArray
-from .visual.color import VertexColor
+# from .visual.color import VertexColor
 
 
 def point_plane_distance(points, plane_normal, plane_origin=None):
