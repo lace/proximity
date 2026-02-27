@@ -1,7 +1,6 @@
 import typing as t
 import numpy as np
 from polliwog.tri.functions import surface_normals
-from scipy.spatial import cKDTree
 from .vendor.triangles import bounds_tree
 
 if t.TYPE_CHECKING:  # pragma: no cover
@@ -19,4 +18,3 @@ class MockTrimesh:
         self.referenced_vertices = np.zeros(len(self.vertices), dtype=bool)
         self.referenced_vertices[self.faces] = True
         self.triangles_tree = bounds_tree(self.triangles)  # type: ignore[no-untyped-call]
-        self.kdtree = cKDTree(vertices.view(np.ndarray))
