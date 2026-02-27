@@ -24,7 +24,7 @@ def faces_nearest_to_points(  # noqa: E704
 
 
 @t.overload
-def faces_nearest_to_points(
+def faces_nearest_to_points(  # noqa: E704
     vertices: np.ndarray,
     faces: np.ndarray,
     query_points: np.ndarray,
