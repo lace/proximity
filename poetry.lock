@@ -1038,7 +1038,7 @@ doc = ["Sphinx", "sphinxcontrib-apidoc", "myst-parser"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<4"
-content-hash = "a91d4928c66e2b3fcdce4055ccd51bdf5c41eb09c2b10268fff0a046a012ba22"
+content-hash = "9880c513f9beb46f8a0523e42ed51dbd277fa0aee9bc8f1d76849e9c9d02e8ef"
 
 [metadata.files]
 alabaster = [

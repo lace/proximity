@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+
+### Other changes
+
+- Relax NumPy constraint now that NumPy 2 is supported
+
 ## 3.0.0a1
 
 ### BREAKING CHANGES
