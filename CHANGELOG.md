@@ -9,6 +9,7 @@
 ### New features
 
 - Provide type annotations.
+- Bump rtree to 1.4.1.
 
 ## 2.0.1
 
