@@ -1,13 +1,12 @@
 #!/usr/bin/env -S poetry run python
 
+import glob
 import os
 import click
-from executor import execute
+import sh
 
 
 def python_source_files() -> list[str]:
-    import glob
-
     include_paths = (
         glob.glob("*.py")
         + glob.glob("proximity/*.py")
@@ -25,68 +24,68 @@ def cli() -> None:
 
 @cli.command()
 def install() -> None:
-    execute("poetry install --sync --extras doc")
+    sh.poetry("install", "--sync", "--extras", "doc", _fg=True)
 
 
 @cli.command()
 def test() -> None:
-    execute("pytest")
+    sh.pytest(_fg=True)
 
 
 @cli.command()
 def coverage() -> None:
-    execute("pytest --cov=proximity")
+    sh.pytest("--cov=proximity", _fg=True)
 
 
 @cli.command()
 def coverage_report() -> None:
-    execute("coverage html")
-    execute("open htmlcov/index.html")
+    sh.coverage("html", _fg=True)
+    sh.open("htmlcov/index.html", _fg=True)
 
 
 @cli.command()
 def check_types() -> None:
-    execute("mypy --show-error-codes proximity/")
-    execute("mypy --show-error-codes dev.py")
+    sh.mypy("--show-error-codes", "proximity/", _fg=True)
+    sh.mypy("--show-error-codes", "dev.py", _fg=True)
 
 
 @cli.command()
 def lint() -> None:
-    execute("flake8", *python_source_files())
+    sh.flake8(*python_source_files(), _fg=True)
 
 
 @cli.command()
 def black() -> None:
-    execute("black", *python_source_files())
+    sh.black(*python_source_files(), _fg=True)
 
 
 @cli.command()
 def black_check() -> None:
-    execute("black", "--check", *python_source_files())
+    sh.black("--check", *python_source_files(), _fg=True)
 
 
 @cli.command()
 def doc() -> None:
-    execute("rm -rf build/ doc/build/ doc/api/")
-    execute("sphinx-build -W -b singlehtml doc doc/build")
+    sh.rm("-rf", "build/", "doc/build/", "doc/api/", _fg=True)
+    sh.Command("sphinx-build")("-W", "-b", "singlehtml", "doc", "doc/build", _fg=True)
 
 
 @cli.command()
 def doc_open() -> None:
-    execute("open doc/build/index.html")
+    sh.open("doc/build/index.html", _fg=True)
 
 
 @cli.command()
 def clean() -> None:
-    execute("find . -name '*.pyc' -delete")
-    execute("find . -name '__pycache__' -delete")
+    sh.find(".", "-name", "*.pyc", "-delete", _fg=True)
+    sh.find(".", "-name", "__pycache__", "-delete", _fg=True)
 
 
 @cli.command()
 def publish() -> None:
-    execute("rm -rf dist/ build/")
-    execute("poetry build")
-    execute("twine upload dist/*")
+    sh.rm("-rf", "dist/", "build/", _fg=True)
+    sh.poetry("build", _fg=True)
+    sh.twine("upload", *glob.glob("dist/*"), _fg=True)
 
 
 if __name__ == "__main__":
