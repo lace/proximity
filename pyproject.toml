@@ -26,6 +26,9 @@ polliwog = ">=3.0.0a0,<4.0.0"
 rtree = "1.4.1"
 scipy = "*"
 vg = ">=2.0.0"
+Sphinx = {version = "4.3.2", optional = true}
+sphinxcontrib-apidoc = {version = "0.3.0", optional = true}
+myst-parser = {version = "0.18.1", optional = true}
 
 [tool.poetry.dev-dependencies]
 black = "22.10.0"
@@ -36,11 +39,11 @@ flake8 = "5.0.4"
 flake8-import-order = "0.18.2"
 lacecore = "3.0.0a1"
 mypy = "1.19.1"
-myst-parser = "0.18.1"
 pytest = "7.2.0"
 pytest-cov = "4.0.0"
-Sphinx = "4.3.2"
-sphinxcontrib-apidoc = "0.3.0"
+
+[tool.poetry.extras]
+doc = ["Sphinx", "sphinxcontrib-apidoc", "myst-parser"]
 
 [build-system]
 # Lint requires setuptools.
