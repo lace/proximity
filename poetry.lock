@@ -3,7 +3,7 @@ name = "alabaster"
 version = "1.0.0"
 description = "A light, configurable Sphinx theme"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.10"
 
 [[package]]
@@ -11,7 +11,7 @@ name = "babel"
 version = "2.18.0"
 description = "Internationalization utilities"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.8"
 
 [package.extras]
@@ -246,7 +246,7 @@ name = "imagesize"
 version = "1.4.1"
 description = "Getting image size from png/jpeg/jpeg2000/gif file"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
@@ -347,7 +347,7 @@ name = "jinja2"
 version = "3.1.6"
 description = "A very fast and expressive template engine."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -438,7 +438,7 @@ name = "markupsafe"
 version = "3.0.3"
 description = "Safely add untrusted strings to HTML/XML markup."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.9"
 
 [[package]]
@@ -454,7 +454,7 @@ name = "mdit-py-plugins"
 version = "0.5.0"
 description = "Collection of plugins for markdown-it-py"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.10"
 
 [package.dependencies]
@@ -516,7 +516,7 @@ name = "myst-parser"
 version = "4.0.1"
 description = "An extended [CommonMark](https://spec.commonmark.org/) compliant parser,"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.10"
 
 [package.dependencies]
@@ -756,7 +756,7 @@ name = "pyyaml"
 version = "6.0.3"
 description = "YAML parser and emitter for Python"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.8"
 
 [[package]]
@@ -896,7 +896,7 @@ name = "snowballstemmer"
 version = "3.0.1"
 description = "This package provides 32 stemmers for 30 languages generated from Snowball algorithms."
 category = "main"
-optional = false
+optional = true
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*"
 
 [[package]]
@@ -904,7 +904,7 @@ name = "sphinx"
 version = "8.1.3"
 description = "Python documentation generator"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.10"
 
 [package.dependencies]
@@ -948,7 +948,7 @@ name = "sphinxcontrib-applehelp"
 version = "2.0.0"
 description = "sphinxcontrib-applehelp is a Sphinx extension which outputs Apple help books"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.9"
 
 [package.extras]
@@ -961,7 +961,7 @@ name = "sphinxcontrib-devhelp"
 version = "2.0.0"
 description = "sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp documents"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.9"
 
 [package.extras]
@@ -974,7 +974,7 @@ name = "sphinxcontrib-htmlhelp"
 version = "2.1.0"
 description = "sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help files"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.9"
 
 [package.extras]
@@ -987,7 +987,7 @@ name = "sphinxcontrib-jsmath"
 version = "1.0.1"
 description = "A sphinx extension which renders display math in HTML via JavaScript"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [package.extras]
@@ -998,7 +998,7 @@ name = "sphinxcontrib-qthelp"
 version = "2.0.0"
 description = "sphinxcontrib-qthelp is a sphinx extension which outputs QtHelp documents"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.9"
 
 [package.extras]
@@ -1011,7 +1011,7 @@ name = "sphinxcontrib-serializinghtml"
 version = "2.0.0"
 description = "sphinxcontrib-serializinghtml is a sphinx extension which outputs \"serialized\" HTML files (json and pickle)"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.9"
 
 [package.extras]
@@ -1109,7 +1109,7 @@ doc = ["Sphinx", "sphinxcontrib-apidoc", "myst-parser"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<4"
-content-hash = "c55522086d4b4db67b98c979596cc7b4cef974a0e1ad55a66b61464ad91a98ad"
+content-hash = "a190bf06792d9212994b2fea49df93b7cbbbfd49d4f5d6940a2b7cec0b5ba127"
 
 [metadata.files]
 alabaster = [
