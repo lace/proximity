@@ -50,7 +50,7 @@ jobs:
       run: ./dev.py lint
 
   run_tests:
-    name: Run tests - Python ${{ matrix.python-version }}, NumPy ${{ matrix.numpy-version }}
+    name: Run tests - Python ${{ matrix.python-version }}, NumPy ${{ matrix.numpy-version }}, SciPy ${{ matrix.scipy-version }}
     runs-on: ubuntu-latest
     if: github.event_name == 'push' || (github.event_name == 'schedule' && github.ref == 'refs/heads/main')
 
@@ -91,6 +91,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         numpy-version: ${{ matrix.numpy-version }}
+        scipy-version: ${{ matrix.scipy-version }}
 
     - name: Run tests
       run: ./dev.py coverage
